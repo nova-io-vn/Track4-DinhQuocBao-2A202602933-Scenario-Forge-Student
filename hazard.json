@@ -1,0 +1,53 @@
+{
+  "format": "avsim-studio/1",
+  "params": {
+    "cutT0": 5,
+    "cutDur": 2.4,
+    "cutV": 15,
+    "pedT0": 9.6,
+    "pedV": 1.45,
+    "busGo": 17.5,
+    "cutDs": -4,
+    "tgT": 0.9,
+    "mu": 0.8,
+    "cutGap": null,
+    "cutBrake": 0,
+    "pedGap": null,
+    "pedLook": 0,
+    "civil": true
+  },
+  "policy": {},
+  "hazards": [
+    {
+      "type": "bike",
+      "x": 80,
+      "lane": "E2",
+      "d": -1.2,
+      "v": 6,
+      "swerve": 1.7,
+      "swDur": 2,
+      "t0": 0,
+      "trig": 5
+    }
+  ],
+  "space": {
+    "h0_x": [
+      65,
+      95
+    ],
+    "h0_trig": [
+      4,
+      10
+    ],
+    "h0_swerve": [
+      1.55,
+      1.8
+    ],
+    "h0_swDur": [
+      1.9,
+      2.4
+    ]
+  },
+  "exposure": 0.01,
+  "why": "Xe đạp ở làn E2 lạng trái tránh ổ gà gần nút giao. FHWA nêu ổ gà và rác là vấn đề bảo trì thường gặp của người đi xe đạp, nhất là tại nút giao (https://www.fhwa.dot.gov/publications/research/safety/pedbike/05085/chapt16.cfm). Nghiên cứu xe đạp tự nhiên ghi 63 sự kiện nguy hiểm/332 chuyến = 0,190/chuyến (https://www.sciencedirect.com/science/article/pii/S1369847815001552); 0,01/chuyến là giả định kịch bản, tương ứng khoảng 5,3% số sự kiện đó có đúng xe đạp lạng gần xe ta, chưa phải tần suất đo trực tiếp. x=65–95 m khoanh 30 m tiếp cận nút giao tại x≈80 m trong bản đồ mô phỏng; trig=4–10 m là khoảng cách phản ứng muộn được khảo sát, không phải phân bố thực địa. Swerve=1,55–1,80 m đủ để xe đạp từ lệch -1,2 m trong làn E2 lấn về làn E1; swDur=1,9–2,4 s cho gia tốc ngang tối đa pi²*1,8/(2*1,9²)=2,46 m/s², dưới giới hạn 3 m/s² của studio. Các khoảng này là miền kịch bản có điều kiện để thử độ nhạy; cần video giao thông và quỹ đạo xe đạp địa phương để hiệu chỉnh tần suất."
+}
